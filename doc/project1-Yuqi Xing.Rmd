@@ -1,9 +1,15 @@
 ---
-title: "A simple R Notebook for exploring 2012 time series data"
+title: "2012 election"
 output:
   pdf_document: default
   html_notebook: default
+  html_document:
+    df_print: paged
 ---
+#introduction
+The 2012 U.S. presidential election was held on Tuesday, November 6, 2012. This is the 57th U.S. presidential election. Meanwhile, all 435 seats in the house of Representatives and 33 seats in the Senate will be re elected to produce the 113th U.S. Congress. The electoral college will be elected first, and then the president and vice president will be elected by the electoral college on December 17, 2012. The incumbent President Barack Obama and Vice President Joe Biden, as qualified candidates, announced their bid for re-election and successfully won the Democratic nomination. The other major party, the Republican Party, nominated former Massachusetts Governor Mitt Romney as the presidential candidate, and congressman Paul Ryan as his deputy. In addition, some candidates representing other political parties and independents participated in the presidential election. Finally, Barack Obama, representing the Democratic Party, won more than half of the electoral votes in the presidential election, defeated Mitt Romney, the Republican Party, by 332 votes to 206 votes, and was re elected as the president of the United States.
+
+#data process
 #install the packages
 ```{r load libraries, warning=FALSE, message=FALSE, include=FALSE}
 packages.used=as.list(
@@ -86,7 +92,6 @@ ggplot(anes_to_gender)+
   labs(title="How did different gender groups participate in the election?")+
   scale_x_discrete(labels=c("1. R voted in the 2012 elections" = "voted", "2. R did not vote in the 2012 elections" = "did not vote"))     # create bar graph for turnout, according to different gender 
 ```
-conclusion:
 Overall, most people turned out to vote.
 For each race, the number of people who voted was significantly greater than the number who did not vote.
 Because of the large white population in the United States, whites play an important role in voting, like whites voting more than all other races combining.
@@ -122,7 +127,6 @@ geom_bar(aes(x=vote_for_president, fill=gender))+
 labs(title="Who did different gender groups vote for president in the election?")+
 theme(axis.text.x = element_text(angle = 45, hjust = 1))   ##create bar graph for vote_for_president, according to different gender
 ```
-conclusion:
 Mr Obama scored significantly higher than the other two.
 Among whites, nearly half support Barack Obama, but more than half support Mitt Romney.
 Among blacks, nearly all voted for Obama (Obanma is black, so there may exist racial bias).
@@ -163,7 +167,6 @@ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
   scale_x_discrete(labels=c("1. Voted for Democratic House candidate" = "Democratic \n House candidate", "2. Voted for Republican House candidate" = "Republican \n House candidate", "7. Voted for other House candidate" = "other House \n candidate"))   ##create bar graph for vote_for_USHouse, according to different gender
 
 ```
-conclusion:
 Overall, the majority favored Democrats, followed by Republicans.
 Most whites supported the Republicans.
 Among blacks, nearly all voted for Democrats (Obanma is black & Democrats, so there may exist racial bias).
@@ -204,10 +207,13 @@ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
 labs(title="Which party did different racial groups vote for as Senvote in the election?")+
 scale_x_discrete(labels=c("1. Voted for Democratic Senate candidate" = "Democratic \n Senate candidate", "2. Voted for Republican Senate candidate" = "Republican \n Senate candidate", "7. Voted for other Senate candidate" = "other Senate \n candidate"))    ##create bar graph for vote_for_Senvote, according to different gender
 ```
-conclusion:
 Overall, the majority favored Democrats, followed by Republicans.
 Half of whites voted Democratic and half of whites supported the Republicans.
 Among blacks, nearly all voted for Democrats (Obanma is black & Democrats, so there may exist racial bias).
 Among Hispanic, most people voted for Democrats.
 For the other races, the vote was evenly split, or close to evenly split by Democats and Republican.
 There is no obvious gender bias in voting for Senate.
+
+
+#conclusion:
+There is no obvious gender bias in voting for president, Senvote and U.S House parts of election. Whites have a higher voice because of the large number of whites in the election. The Democrats and the Republicans are basically in a close race for voting for U.S House and Senvote, but the Democrats are a little more likely to vote. The similiar situation happens on Obama and romney.It's worth noting that almost all blacks voted for Obama and the Democrats, making a influence in this election (blacks have the second largest population, followed by whites). 
