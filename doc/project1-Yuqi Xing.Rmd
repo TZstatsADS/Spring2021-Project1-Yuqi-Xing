@@ -1,5 +1,5 @@
 ---
-title: "2012 election"
+title: "racial bias and gender bias in 2012 election"
 output:
   pdf_document: default
   html_notebook: default
@@ -216,4 +216,4 @@ There is no obvious gender bias in voting for Senate.
 
 
 #conclusion:
-There is no obvious gender bias in voting for president, Senvote and U.S House parts of election. Whites have a higher voice because of the large number of whites in the election. The Democrats and the Republicans are basically in a close race for voting for U.S House and Senvote, but the Democrats are a little more likely to vote. The similiar situation happens on Obama and romney.It's worth noting that almost all blacks voted for Obama and the Democrats, making a influence in this election (blacks have the second largest population, followed by whites). 
+There is no obvious gender bias in voting for president, Senvote and U.S House parts of election. Whites have a higher voice because of the large number of whites in the election. The Democrats and the Republicans are basically in a close race for voting for U.S House and Senvote, but the Democrats are a little more likely to vote. The similiar situation happens on Obama and romney.It's worth noting that almost all blacks voted for Obama and the Democrats, making a influence in this election (blacks have the second largest population, followed by whites). There exists a gender bias in 2012 election.
